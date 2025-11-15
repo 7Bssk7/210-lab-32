@@ -35,8 +35,14 @@ int main(){
         else{
             cout << endl;
         }
-        for(int i = 0; i < list.size(); ++i){
-           list.at(i).print();
+        cout << "Queue: " << endl;
+        if(!(list.empty())){
+            for(int i = 0; i < list.size(); ++i){
+                list.at(i).print();
+            }
+        }
+        else{
+            cout << "    Empty" << endl;
         }
 
         count++;
