@@ -6,15 +6,13 @@ using namespace std;
 
 const int SIZE = 2;
 
-bool chance(int );
-
 int main(){
     srand(time(0));
 
     deque<Car> list(SIZE);
     int count = 1;
 
-    cout << "Imitial queue:" << endl;
+    cout << "Initial queue:" << endl;
     for(int i = 0; i < list.size(); ++i){
         cout << "    ";
         list.at(i).print();
@@ -24,16 +22,15 @@ int main(){
         cout << "Time: " << count << " Operation: ";
         int random = rand()% 100 + 1;
         if(random <= 55){
-            cout << " Car paid: ";
+            cout << "Car paid: ";
             list.front().print();
             list.pop_front();
         }
         else{
             Car temp_car;
-            cout << " Joined lane: ";
+            cout << "Joined lane: ";
             temp_car.print();
             list.push_back(temp_car);
-            cout << endl;
         }
 
         cout << "Queue: " << endl;
@@ -53,10 +50,4 @@ int main(){
     
 
     return 0;
-}
-
-
-bool chance(int p){
-    int random = rand()% 100 + 1;
-    return (random <= p);
 }
