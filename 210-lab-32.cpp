@@ -26,7 +26,8 @@ int main(){
         }
         else if(chance(45)){
             Car temp_car;
-            cout << "Joined lane: " << temp_car.print();
+            cout << "Joined lane: ";
+            temp_car.print();
         }
 
     }
