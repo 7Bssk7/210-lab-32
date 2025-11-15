@@ -4,6 +4,8 @@
 
 using namespace std;
 
+bool chance(int );
+
 int main(){
 
     deque<Car> list;
@@ -18,4 +20,9 @@ int main(){
     }
 
     return 0;
+}
+
+bool chance(int p){
+    int random = rand()% 100 + 1;
+    return (random <= p);
 }
