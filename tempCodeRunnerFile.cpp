@@ -1,0 +1,2 @@
+
+            list.pop_front();
