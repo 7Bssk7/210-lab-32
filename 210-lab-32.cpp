@@ -43,6 +43,7 @@ int main(){
             list.push_back(temp_car);
         }
 
+        // Outputs the current deque
         cout << "Queue: " << endl;
         if(!(list.empty())){
             for(int i = 0; i < list.size(); ++i){
@@ -54,6 +55,7 @@ int main(){
             cout << "    Empty" << endl;
         }
 
+        // Increment counter of operations
         count++;
 
     }
