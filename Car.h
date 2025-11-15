@@ -32,7 +32,7 @@ public:
     void setTransponder(int t) { transponder = t; }
 
     void print() {
-        cout << "[" << year << " " << make << " (" << transponder << ")]\n";
+        cout << "    [" << year << " " << make << " (" << transponder << ")]\n";
     }
 
 };
