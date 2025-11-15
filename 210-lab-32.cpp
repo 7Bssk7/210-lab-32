@@ -19,16 +19,27 @@ int main(){
     }
 
     while(!(list.empty())){
-        cout << "Time: " << count << "Operation: ";
+        cout << "Time: " << count << " Operation: ";
         if(chance(55)){
-            cout << "Car paid: ";
-
+            cout << " Car paid: ";
+            list.front().print();
+            list.pop_front();
         }
         else if(chance(45)){
             Car temp_car;
-            cout << "Joined lane: ";
+            cout << " Joined lane: ";
             temp_car.print();
+            list.push_back(temp_car);
+            cout << endl;
         }
+        else{
+            cout << endl;
+        }
+        for(int i = 0; i < list.size(); ++i){
+           list.at(i).print();
+        }
+
+        count++;
 
     }
     
