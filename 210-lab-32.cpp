@@ -6,5 +6,7 @@ using namespace std;
 
 int main(){
 
+    deque<Car> list;
+
     return 0;
 }
