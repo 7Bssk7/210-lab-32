@@ -4,16 +4,13 @@
 
 using namespace std;
 
+const int SIZE = 2;
+
 bool chance(int );
 
 int main(){
 
-    deque<Car> list;
-
-    for(int i = 0; i < 5; ++i){
-        Car temp_car;
-        list.push_back(temp_car);
-    }
+    deque<Car> list(SIZE);
 
     for(int i = 0; i < list.size(); ++i){
         list.at(i).print();
