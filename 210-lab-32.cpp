@@ -18,11 +18,13 @@ int main(){
     // Track simulation
     int count = 1; 
 
+    /*
     //Milesstone 2, test
-
     for (int i = 0; i <ARR_SIZE; ++i){
         cout << "Line #" << i+1 << " has " << lines[i].size() << " cars in it" << endl;
     }
+    */
+   
     // Outputs the initial queue (Milesstone 3)
     cout << "Initial queue:" << endl;
     for(int i = 0; i < ARR_SIZE; ++i){
