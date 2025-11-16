@@ -28,7 +28,7 @@ int main(){
     // Outputs the initial queue (Milesstone 3)
     cout << "Initial queue:" << endl;
     for(int i = 0; i < ARR_SIZE; ++i){
-        cout << "Lane #" << i+1 << endl;
+        cout << "Lane " << i+1 << endl;
         for(int j = 0; j < lines[i].size(); ++j){
             cout << "    ";
             lines[i][j].print();
