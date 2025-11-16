@@ -7,13 +7,14 @@
 using namespace std;
 
 // Constant for initial number of cars in the queue
-const int SIZE = 2;
+const int ARR_SIZE = 4, LANE_SIZE = 2;
 
 int main(){
     srand(time(0));
 
     // Create a deque with SIZE cars (initial queue)
-    deque<Car> list(SIZE);
+    deque<Car> lines[ARR_SIZE] = {deque<Car>(LANE_SIZE), deque<Car>(LANE_SIZE), deque<Car>(LANE_SIZE), deque<Car>(LANE_SIZE)};
+    
     // Track simulation
     int count = 1; 
 
@@ -24,6 +25,7 @@ int main(){
         list.at(i).print();
     }
 
+    /*
     // Run simulation until the deque is empty
     while(!(list.empty())){
         cout << "Time: " << count << " Operation: ";
@@ -59,6 +61,7 @@ int main(){
         count++;
 
     }
+    */    
     
 
     return 0;
