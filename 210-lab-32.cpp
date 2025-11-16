@@ -7,7 +7,7 @@
 using namespace std;
 
 // Constant for initial number of cars in the queue
-const int ARR_SIZE = 4, LINE_SIZE = 2;
+const int ARR_SIZE = 4, LINE_SIZE = 2, SIMULATION = 20;
 
 int main(){
     srand(time(0));
@@ -24,7 +24,7 @@ int main(){
         cout << "Line #" << i+1 << " has " << lines[i].size() << " cars in it" << endl;
     }
     */
-   
+
     // Outputs the initial queue (Milesstone 3)
     cout << "Initial queue:" << endl;
     for(int i = 0; i < ARR_SIZE; ++i){
@@ -33,6 +33,10 @@ int main(){
             cout << "    ";
             lines[i][j].print();
         }
+    }
+
+    for(int i = 0; i < SIMULATION; ++i){
+
     }
 
     /*
