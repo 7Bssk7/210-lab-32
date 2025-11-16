@@ -8,6 +8,7 @@ using namespace std;
 
 // Constant for initial number of cars in the queue
 const int ARR_SIZE = 4, LINE_SIZE = 2, SIMULATION = 20;
+const int CHANCE_1 = 55;
 
 int main(){
     srand(time(0));
@@ -34,9 +35,23 @@ int main(){
             lines[i][j].print();
         }
     }
+    cout << endl;
 
     for(int i = 0; i < SIMULATION; ++i){
+        int random = rand()% 100 + 1;
         cout << "Time " << i+1 << endl;
+
+        for(int i = 0; i < ARR_SIZE; ++i){
+            for(int j = 0; j < lines[i].size(); ++j){
+                if(lines[i].empty()){
+
+                }
+                else{
+                    
+                }
+            }
+        }
+        
 
 
         for(int i = 0; i < ARR_SIZE; ++i){
