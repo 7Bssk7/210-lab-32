@@ -36,7 +36,18 @@ int main(){
     }
 
     for(int i = 0; i < SIMULATION; ++i){
+        cout << "Time " << i+1 << endl;
 
+
+        for(int i = 0; i < ARR_SIZE; ++i){
+            cout << "Lane " << i+1 << " Queue:" << endl;
+            for(int j = 0; j < lines[i].size(); ++j){
+                cout << "    ";
+                lines[i][j].print();
+            }
+        }
+
+        cout << endl;
     }
 
     /*
