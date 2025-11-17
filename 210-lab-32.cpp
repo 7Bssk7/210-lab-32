@@ -42,23 +42,28 @@ int main(){
         cout << "Time " << i+1 << endl;
 
         for(int i = 0; i < ARR_SIZE; ++i){
-            for(int j = 0; j < lines[i].size(); ++j){
-                if(lines[i].empty()){
+            if(lines[i].empty()){
+                int randomJoin = rand() % 2;
+                if( randomJoin == 1){
 
                 }
                 else{
-                    if(random <= CHANCE_1){
-
-                    }
-                    else if(){
-
-
-                    }
-                    else{
-                        
-                    }
 
                 }
+
+            }
+            else{
+                if(random <= CHANCE_1){
+
+                }
+                else if( random <= CHANCE_1 + CHANCE_2){
+
+
+                }
+                else{
+
+                }
+
             }
         }
         
