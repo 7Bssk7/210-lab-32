@@ -63,7 +63,14 @@ int main(){
                 }
                 else{
                     int randomShift = rand() % 4;
-                    if()
+                    while(randomShift == i){
+                        randomShift = rand() % 4;
+                    }
+
+                    cout << "Switched: ";
+                    lines[i].back().print();
+                    lines[randomShift].push_back(lines[i].back());
+                    lines[i].pop_back();
 
                 }
 
