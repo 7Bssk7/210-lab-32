@@ -45,22 +45,25 @@ int main(){
             if(lines[i].empty()){
                 int randomJoin = rand() % 2;
                 if( randomJoin == 1){
-
+                    Car temp_car;
+                    lines[i].push_back(temp_car);
                 }
-                else{
-
-                }
-
             }
             else{
                 if(random <= CHANCE_1){
-
+                    cout << "Car paid: ";
+                    lines[i].front().print();
+                    lines[i].pop_front();
                 }
                 else if( random <= CHANCE_1 + CHANCE_2){
-
-
+                    Car join_car;
+                    cout << "Car joined the line: ";
+                    join_car.print();
+                    lines[i].push_back(join_car);
                 }
                 else{
+                    int randomShift = rand() % 4;
+                    if()
 
                 }
 
