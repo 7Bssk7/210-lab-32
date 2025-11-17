@@ -38,39 +38,44 @@ int main(){
     cout << endl;
 
     for(int i = 0; i < SIMULATION; ++i){
-        int random = rand()% 100 + 1;
         cout << "Time " << i+1 << endl;
 
-        for(int i = 0; i < ARR_SIZE; ++i){
-            if(lines[i].empty()){
+        for(int j = 0; j < ARR_SIZE; ++j){
+            int random = rand()% 100 + 1;
+            cout << "Lane: " << j+1;
+            if(lines[j].empty()){
                 int randomJoin = rand() % 2;
                 if( randomJoin == 1){
                     Car temp_car;
-                    lines[i].push_back(temp_car);
+                    cout << " Joined: ";
+                    temp_car.print();
+                    lines[j].push_back(temp_car);
+                }
+                else{
+                    cout << endl;
                 }
             }
             else{
                 if(random <= CHANCE_1){
-                    cout << "Car paid: ";
-                    lines[i].front().print();
-                    lines[i].pop_front();
+                    cout << " Paid: ";
+                    lines[j].front().print();
+                    lines[j].pop_front();
                 }
                 else if( random <= CHANCE_1 + CHANCE_2){
                     Car join_car;
-                    cout << "Car joined the line: ";
+                    cout << " Joined: ";
                     join_car.print();
-                    lines[i].push_back(join_car);
+                    lines[j].push_back(join_car);
                 }
                 else{
                     int randomShift = rand() % 4;
-                    while(randomShift == i){
+                    while(randomShift == j){
                         randomShift = rand() % 4;
                     }
-
-                    cout << "Switched: ";
-                    lines[i].back().print();
-                    lines[randomShift].push_back(lines[i].back());
-                    lines[i].pop_back();
+                    cout << " Switched: ";
+                    lines[j].back().print();
+                    lines[randomShift].push_back(lines[j].back());
+                    lines[j].pop_back();
 
                 }
 
@@ -79,11 +84,11 @@ int main(){
         
 
 
-        for(int i = 0; i < ARR_SIZE; ++i){
-            cout << "Lane " << i+1 << " Queue:" << endl;
-            for(int j = 0; j < lines[i].size(); ++j){
+        for(int n = 0; n < ARR_SIZE; ++n){
+            cout << "Lane " << n+1 << " Queue:" << endl;
+            for(int k = 0; k < lines[n].size(); ++k){
                 cout << "    ";
-                lines[i][j].print();
+                lines[n][k].print();
             }
         }
 
