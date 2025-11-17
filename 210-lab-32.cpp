@@ -85,54 +85,21 @@ int main(){
 
 
         for(int n = 0; n < ARR_SIZE; ++n){
-            cout << "Lane " << n+1 << " Queue:" << endl;
-            for(int k = 0; k < lines[n].size(); ++k){
-                cout << "    ";
-                lines[n][k].print();
+            if(lines[n].empty()){
+                cout << "Lane " << n+1 << " Queue: empty" << endl;
+            }
+            else{
+                cout << "Lane " << n+1 << " Queue:" << endl;
+                for(int k = 0; k < lines[n].size(); ++k){
+                    cout << "    ";    
+                    lines[n][k].print();
+
+                }
             }
         }
 
         cout << endl;
     }
-
-    /*
-    // Run simulation until the deque is empty
-    while(!(list.empty())){
-        cout << "Time: " << count << " Operation: ";
-        // Generate a random number to decide the operation
-        int random = rand()% 100 + 1;
-        // checks if (55% chance): car at front pays and leaves
-        if(random <= 55){
-            cout << "Car paid: ";
-            list.front().print();
-            list.pop_front();
-        }
-        // if random > 55% -> 45%, so checks if (45% chance) new car joins the back of the deque
-        else{
-            Car temp_car;
-            cout << "Joined lane: ";
-            temp_car.print();
-            list.push_back(temp_car);
-        }
-
-        // Outputs the current deque
-        cout << "Queue: " << endl;
-        if(!(list.empty())){
-            for(int i = 0; i < list.size(); ++i){
-                cout << "    ";
-                list.at(i).print();
-            }
-        }
-        else{
-            cout << "    Empty" << endl;
-        }
-
-        // Increment counter of operations
-        count++;
-
-    }
-    */    
-    
 
     return 0;
 }
