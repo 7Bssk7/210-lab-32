@@ -8,7 +8,7 @@ using namespace std;
 
 // Constant for initial number of cars in the queue
 const int ARR_SIZE = 4, LINE_SIZE = 2, SIMULATION = 20;
-const int CHANCE_1 = 55;
+const int CHANCE_1 = 46, CHANCE_2 = 39;
 
 int main(){
     srand(time(0));
@@ -47,7 +47,17 @@ int main(){
 
                 }
                 else{
-                    
+                    if(random <= CHANCE_1){
+
+                    }
+                    else if(){
+
+
+                    }
+                    else{
+                        
+                    }
+
                 }
             }
         }
